@@ -1,5 +1,6 @@
 from fastapi import FastAPI
-from models import MovieCreate  # <- importamos el modelo de entrada
+from models import MovieCreate
+import movies  # <--- Importamos nuestro nuevo módulo de rutas
 
 app = FastAPI(title="Movie Catalog API")
 
@@ -14,3 +15,6 @@ def create_movie(payload: MovieCreate):
         "message": "Película recibida (aún sin guardar)",
         "data": payload.model_dump()
     }
+
+# <--- Montamos las rutas del router en /api/v1
+app.include_router(movies.router, prefix="/api/v1")
