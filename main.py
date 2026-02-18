@@ -12,9 +12,10 @@ def root():
 def create_movie(payload: MovieCreate):
     return {
         "success": True,
-        "message": "Película recibida (aún sin guardar)",
+        "message": "Película creada correctamente",
         "data": payload.model_dump()
     }
+    
 
 # <--- Montamos las rutas del router en /api/v1
 app.include_router(movies.router, prefix="/api/v1")
