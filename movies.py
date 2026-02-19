@@ -5,7 +5,7 @@ from models import MovieCreate, MovieUpdate, MovieResponse, MovieListResponse
 router = APIRouter(tags=["Movies"])
 db = MovieDatabase()
 
-# -------------------- CRUD Películas --------------------
+
 
 @router.post("/movies", status_code=201, response_model=MovieResponse)
 def create_movie(movie: MovieCreate):
