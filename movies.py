@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
 from database import MovieDatabase
-from models import (MovieCreate, MovieUpdate, MovieResponse)
+from models import (MovieCreate, MovieUpdate, MovieResponse, MovieListResponse)
 
 
 router = APIRouter(tags=["movies"])
@@ -19,13 +19,15 @@ def create_movie(movie: MovieCreate):
     }
 
 
-@router.get("/movies")
+@router.get("/movies", response_model=MovieListResponse)
 def list_movies():
-    """
-    Endpoint para listar todas las películas.
-    Retorna una lista de diccionarios con los datos actuales del catálogo.
-    """
-    return db.list_movies()
+    items = db.list_movies()
+    return {
+        "success": True,
+        "message": f"Se encontraron {len(items)} películas",
+        "data": items,
+        "total": len(items)
+    }
 
 
 @router.get("/movies/{movie_id}", response_model=MovieResponse)
