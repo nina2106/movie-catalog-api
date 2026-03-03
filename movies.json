@@ -1,18 +1,6 @@
 {
   "movies": [
     {
-      "id": 1,
-      "title": "Interstellar",
-      "director": "Christopher Nolan",
-      "year": 2014,
-      "genre": "Sci-Fi",
-      "duration": 169,
-      "rating": 9.0,
-      "description": "Un grupo de exploradores viaja a través de un agujero de gusano en el espacio.",
-      "price": 12.5,
-      "is_watched": true
-    },
-    {
       "id": 2,
       "title": "Inception",
       "director": "Christopher Nolan",
@@ -28,7 +16,7 @@
       "id": 3,
       "title": "string",
       "director": "string",
-      "year": 1880,
+      "year": 1887,
       "genre": "string",
       "duration": 1,
       "rating": 10.0,
@@ -59,7 +47,55 @@
       "description": "Secuela de Avatar que sigue la historia de Pandora y la familia de Jake Sully.",
       "price": 15.0,
       "is_watched": false
+    },
+    {
+      "id": 8,
+      "title": "string",
+      "director": "string",
+      "year": 1880,
+      "genre": "string",
+      "duration": 1,
+      "rating": 10.0,
+      "description": "string",
+      "price": 0.0,
+      "is_watched": false
+    },
+    {
+      "id": 9,
+      "title": "string",
+      "director": "string",
+      "year": 1999,
+      "genre": "string",
+      "duration": 1,
+      "rating": 10.0,
+      "description": "string",
+      "price": 0.0,
+      "is_watched": false
+    },
+    {
+      "id": 10,
+      "title": "The Matrix",
+      "director": "Lana Wachowski y Lilly Wachowski",
+      "year": 1999,
+      "genre": "Acción / Ciencia ficción",
+      "duration": null,
+      "rating": 8.7,
+      "description": "Un programador descubre que la realidad es una simulación creada por máquinas.",
+      "price": null,
+      "is_watched": false
+    },
+    {
+      "id": 11,
+      "title": "Parasite",
+      "director": "Bong Joon-ho",
+      "year": 2019,
+      "genre": "Drama / Thriller",
+      "duration": null,
+      "rating": 8.6,
+      "description": "Una familia con dificultades económicas se infiltra en la vida de una familia rica.",
+      "price": null,
+      "is_watched": false
     }
   ],
-  "next_id": 7
+  "next_id": 12
 }
